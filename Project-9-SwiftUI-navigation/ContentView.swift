@@ -16,7 +16,11 @@ struct Student: Hashable {
 struct ContentView: View {
     var body: some View {
         NavigationStack {
-            List(0..<100) { i in
+            List(0..<5) { i in
+                NavigationLink("Select \(i)", value: i)
+            }
+            
+            List(0..<5) { i in
                 NavigationLink("Select \(i)", value: i)
             }.navigationDestination(for: Int.self) { selection in
                 Text("Selection \(selection)")
@@ -24,6 +28,8 @@ struct ContentView: View {
             .navigationDestination(for: Student.self) { student in
                 Text("Selection \(student.name)")
             }
+            
+            
         }
     }
 }
