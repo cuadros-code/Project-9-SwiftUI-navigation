@@ -1,12 +1,8 @@
-//
-//  ContentView.swift
-//  Project-9-SwiftUI-navigation
-//
-//  Created by Kevin Cuadros on 19/11/24.
-//
+# Navigation 
 
-import SwiftUI
+## Handling navigation the smart way with navigationDestination()
 
+```swift
 struct Student: Hashable {
     var id = UUID()
     var name: String
@@ -37,7 +33,5 @@ struct ContentView: View {
         }
     }
 }
+```
 
-#Preview {
-    ContentView()
-}
